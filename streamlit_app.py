@@ -24,7 +24,7 @@ streamlit.dataframe(fruits_to_show)
 
 # Display the table on the page.
 import requests
-fruitvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruitvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 streamlit.text(fruitvice_response.json())
 
 # write your own comment -what does the next line do? 
