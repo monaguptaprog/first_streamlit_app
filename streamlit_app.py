@@ -1,7 +1,9 @@
 
 import streamlit
 import pandas
+import requests
 import snowflake.connector
+from urllib.error import URLError
 
 streamlit.title('My parents new healthy dinner')
 
@@ -23,7 +25,7 @@ fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
 # Display the table on the page.
-import requests
+
 fruitvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 #streamlit.text(fruitvice_response.json())
 
